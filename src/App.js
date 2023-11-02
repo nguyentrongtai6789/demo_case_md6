@@ -3,9 +3,11 @@ import './App.css';
 import {Route, Routes} from "react-router-dom";
 import {HomeUser} from "./tour/view/Home-user";
 import {About} from "./tour/view/About";
-import {InfoUser} from "./tour/view/Info-user";
+import {InfoLover} from "./tour/view/InfoLover";
 import {FormLogin} from "./tour/view/FormLogin";
 import {Layout} from "./tour/view/Layout";
+import {Demo} from "./tour/view/Demo";
+import {InfoUser} from "./tour/view/InfoUser";
 
 
 function App() {
@@ -15,11 +17,9 @@ function App() {
                 <Route path={'/'} element={<Layout/>}>
                     <Route path={""} element={<HomeUser/>}></Route>
                 </Route>
-                <Route path={'/info-lover'} element={<InfoUser/>}></Route>
-                {/*<Route path={'/form-login'} element={<FormLogin/>}></Route>*/}
-                {/*<Route path={'/tourInformation/:id'} element={<TourInformation/>}></Route>*/}
-                {/*<Route path={'/create'} element={<HomeUser/>}></Route>*/}
-                {/*<Route path={'/edit/:id'} element={<FormEdit/>}></Route>*/}
+                <Route path={'/info-lover'} element={<InfoLover/>}></Route>
+                <Route path={'/info-user'} element={<InfoUser/>}></Route>
+                <Route path={'/demo'} element={<Demo/>}></Route>
             </Routes>
         </>
     );

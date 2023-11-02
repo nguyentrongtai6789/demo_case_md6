@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {FormLogin} from "./FormLogin";
 import {TopPlayer} from "./TopPlayer";
 import {TopRichMan} from "./TopRichMan";
+import {Demo} from "./Demo";
 
 function Header() {
 
@@ -18,13 +19,12 @@ function Header() {
 
                     <nav id="navbar" className="navbar order-last order-lg-0">
                         <ul>
-                            <li><a className="nav-link scrollto active" href="#hero" style={{marginLeft: 0}}>Trang
-                                chủ</a></li>
+                            <li><Link to={"/"} style={{textDecoration:"none"}}>Trang chủ</Link></li>
                             <li>
                                 <input type="text" placeholder={"Nhập tên"} style={{marginLeft: 25, width: 190}}
                                        className={"form-control"}/>
                             </li>
-                            <li><a className="nav-link scrollto" href="#menu">Trang của bạn</a></li>
+                            <li><Link to={"/info-user"} style={{textDecoration:"none"}}>Trang của bạn</Link></li>
                             <li><a className="nav-link scrollto" href="#menu" data-bs-toggle={"modal"}
                                    data-bs-target={"#top-player"}>Top player</a></li>
                             <li><a className="nav-link scrollto" href="#menu" data-bs-toggle={"modal"}
